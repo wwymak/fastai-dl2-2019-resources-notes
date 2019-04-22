@@ -613,10 +613,6 @@ from torch import nn
 ```
 
 
-```python
-nn.Module??
-```
-
 
 ```python
 # model redefined to inherit from nn.Module
