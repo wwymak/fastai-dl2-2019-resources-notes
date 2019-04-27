@@ -54,19 +54,8 @@ char_mapping
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -195,7 +184,7 @@ for i in range(1, 4):
 ```
 
 
-![png](output_17_0.png)
+![png](https://github.com/wwymak/fastai-dl2-2019-resources-notes/blob/master/imgs/output_17_0.png)
 
 
 Next, we also want to normalise the data so e.g. illumniation does affect the output of the training/prediction. In normalistaion we rescale the samples so they have mean 0 and standard deviation of 1
@@ -623,10 +612,6 @@ In nn.Module, the forward method is not defined by default, but our model does n
 from torch import nn
 ```
 
-
-```python
-nn.Module??
-```
 
 
 ```python
