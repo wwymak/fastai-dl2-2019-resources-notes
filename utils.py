@@ -8,6 +8,9 @@ from functools import partial
 
 import pandas as pd
 import numpy as np
+from fastai import datasets
+
+MNIST_URL='http://deeplearning.net/data/mnist/mnist.pkl'
 
 
 def normalise(x, mean, std):
@@ -35,3 +38,10 @@ def get_data():
     X_test = X_test.reshape([X_test.shape[0], -1])
 
     return X_train, X_test, y_train, y_test
+
+
+def get_data_mnist():
+    path = datasets.download_data(MNIST_URL, ext='.gz')
+    with gzip.open(path, 'rb') as f:
+        ((x_train, y_train), (x_valid, y_valid), _) = pickle.load(f, encoding='latin-1')
+    return map(tensor, (x_train, y_train, x_valid, y_valid))
